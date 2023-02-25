@@ -65,3 +65,7 @@ jobs:
           echo "sdk.dir=${ANDROID_HOME}" > local.properties
           echo "ndk.dir=${ANDROID_HOME}/ndk/25.0.8775105" >> local.properties
           ./run lib core
+      - uses: actions/upload-artifact@v3
+        with:
+          name: "Lib"
+          path: local.properties
